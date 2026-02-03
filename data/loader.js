@@ -104,6 +104,7 @@
     config.gamePatchUrl = window.EJS_gamePatchUrl;
     config.gameParentUrl = window.EJS_gameParentUrl;
     config.netplayUrl = window.EJS_netplayServer;
+    config.netplayICEServers = window.EJS_netplayICEServers; 
     config.gameId = window.EJS_gameID;
     config.backgroundImg = window.EJS_backgroundImage;
     config.backgroundBlur = window.EJS_backgroundBlur;
@@ -125,6 +126,9 @@
     config.hideSettings = window.EJS_hideSettings;
     config.browserMode = window.EJS_browserMode;
     config.shaders = Object.assign({}, window.EJS_SHADERS, window.EJS_shaders ? window.EJS_shaders : {});
+    config.fixedSaveInterval = window.EJS_fixedSaveInterval;
+    config.disableAutoUnload = window.EJS_disableAutoUnload;
+    config.disableBatchBootup = window.EJS_disableBatchBootup;
 
     let systemLang;
     try {
@@ -200,5 +204,9 @@
     }
     if (typeof window.EJS_onSaveSave === "function") {
         window.EJS_emulator.on("saveSave", window.EJS_onSaveSave);
+    }
+    if (typeof window.EJS_onSaveUpdate === "function") {
+        window.EJS_emulator.on("saveUpdate", window.EJS_onSaveUpdate);
+        window.EJS_emulator.enableSaveUpdateEvent();
     }
 })();
