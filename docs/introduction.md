@@ -11,7 +11,7 @@ This doc was assisted by AI.
 ## Loading Your First Game
 
 1. Open the emulator in your browser: https://anonymousbirb5100.github.io/official-retro-emulator  
-   *(Also available on [BirdHub V2 v1.9.7](https://github.com/anonymousbirb5100/birdhub-v2) and later)*
+   *(Also available on [BirdHub V2 v1.9.6](https://github.com/anonymousbirb5100/birdhub-v2) and later)*
 
 2. Click the gray box to upload your ROM **or** drag and drop your ROM file into it
 
